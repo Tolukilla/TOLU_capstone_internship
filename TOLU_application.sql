@@ -33,15 +33,15 @@ prompt APPLICATION 82816 - Mini-HCM Suite
 -- Application Export:
 --   Application:     82816
 --   Name:            Mini-HCM Suite
---   Date and Time:   19:22 Friday August 28, 2026
+--   Date and Time:   14:07 Monday August 31, 2026
 --   Exported By:     OJOKILATOLU@GMAIL.COM
 --   Flashback:       0
 --   Export Type:     Application Export
---     Pages:                     20
+--     Pages:                     23
 --       Items:                   33
 --       Validations:              4
 --       Processes:               30
---       Regions:                 37
+--       Regions:                 43
 --       Buttons:                 17
 --     Shared Components:
 --       Logic:
@@ -49,7 +49,7 @@ prompt APPLICATION 82816 - Mini-HCM Suite
 --       Navigation:
 --         Lists:                  3
 --         Breadcrumbs:            1
---           Entries:             16
+--           Entries:             19
 --       Security:
 --         Authentication:         2
 --         Authorization:          3
@@ -109,12 +109,12 @@ wwv_imp_workspace.create_flow(
 ,p_substitution_string_01=>'APP_NAME'
 ,p_substitution_value_01=>'Mini-HCM Suite'
 ,p_created_on=>wwv_flow_imp.dz('20260823202703Z')
-,p_last_updated_on=>wwv_flow_imp.dz('20260828192107Z')
+,p_last_updated_on=>wwv_flow_imp.dz('20260831140506Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_last_updated_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_file_prefix=>nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>2461276202704
-,p_version_scn=>'15818050830939'
+,p_version_scn=>'15820366311961'
 ,p_print_server_type=>'INSTANCE'
 ,p_file_storage=>'DB'
 ,p_is_pwa=>'Y'
@@ -377,9 +377,9 @@ wwv_flow_imp_shared.create_list(
  p_id=>wwv_flow_imp.id(31310412114906049357)
 ,p_name=>'Navigation Menu'
 ,p_static_id=>'navigation-menu'
-,p_version_scn=>'SH256:erzIVMypQZaPxakC24OkVPA6WvNeZVgvz7pUEIMjKmQ'
+,p_version_scn=>'SH256:VD8BLygcldeUWyw9LVFBsZ_Z_ONBdci1FwSOVmg6q2E'
 ,p_created_on=>wwv_flow_imp.dz('20260823202704Z')
-,p_updated_on=>wwv_flow_imp.dz('20260828092150Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831095816Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -432,9 +432,10 @@ wwv_flow_imp_shared.create_list_item(
 ,p_list_item_link_text=>'clock-in'
 ,p_static_id=>'clock-id'
 ,p_list_item_link_target=>'f?p=&APP_ID.:14:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-alarm-check'
 ,p_list_item_current_type=>'TARGET_PAGE'
 ,p_created_on=>wwv_flow_imp.dz('20260827164016Z')
-,p_updated_on=>wwv_flow_imp.dz('20260827164121Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831095816Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -472,12 +473,13 @@ wwv_flow_imp_shared.create_list_item(
 ,p_list_item_display_sequence=>130
 ,p_list_item_link_text=>'Daily attendance summary report'
 ,p_static_id=>'daily-attendance-summary-report'
-,p_list_item_link_target=>'f?p=&APP_ID.:13:&APP_SESSION.::&DEBUG.:::'
+,p_list_item_link_target=>'f?p=&APP_ID.:13:&SESSION.::&DEBUG.::::'
 ,p_list_item_icon=>'fa-list'
+,p_security_scheme=>wwv_flow_imp.id(32395475308312409544)
 ,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
 ,p_list_item_current_for_pages=>'13'
 ,p_created_on=>wwv_flow_imp.dz('20260827123912Z')
-,p_updated_on=>wwv_flow_imp.dz('20260827123912Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831092208Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -486,12 +488,13 @@ wwv_flow_imp_shared.create_list_item(
 ,p_list_item_display_sequence=>190
 ,p_list_item_link_text=>'Dashboard'
 ,p_static_id=>'dashboard'
-,p_list_item_link_target=>'f?p=&APP_ID.:20:&APP_SESSION.::&DEBUG.:::'
+,p_list_item_link_target=>'f?p=&APP_ID.:20:&SESSION.::&DEBUG.::::'
 ,p_list_item_icon=>'fa-dashboard'
+,p_security_scheme=>wwv_flow_imp.id(32395475308312409544)
 ,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
 ,p_list_item_current_for_pages=>'20'
 ,p_created_on=>wwv_flow_imp.dz('20260828092150Z')
-,p_updated_on=>wwv_flow_imp.dz('20260828092150Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831092330Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -531,9 +534,10 @@ wwv_flow_imp_shared.create_list_item(
 ,p_static_id=>'employee-list'
 ,p_list_item_link_target=>'f?p=&APP_ID.:2:&SESSION.::&DEBUG.::::'
 ,p_list_item_icon=>'fa-user-worker'
+,p_security_scheme=>wwv_flow_imp.id(32395475308312409544)
 ,p_list_item_current_type=>'TARGET_PAGE'
 ,p_created_on=>wwv_flow_imp.dz('20260823202704Z')
-,p_updated_on=>wwv_flow_imp.dz('20260828082754Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831092233Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -542,11 +546,12 @@ wwv_flow_imp_shared.create_list_item(
 ,p_list_item_display_sequence=>10
 ,p_list_item_link_text=>'Home'
 ,p_static_id=>'home'
-,p_list_item_link_target=>'f?p=&APP_ID.:1:&APP_SESSION.::&DEBUG.:::'
+,p_list_item_link_target=>'f?p=&APP_ID.:1:&SESSION.::&DEBUG.::::'
 ,p_list_item_icon=>'fa-home'
+,p_security_scheme=>wwv_flow_imp.id(32395475308312409544)
 ,p_list_item_current_type=>'TARGET_PAGE'
 ,p_created_on=>wwv_flow_imp.dz('20260823202704Z')
-,p_updated_on=>wwv_flow_imp.dz('20260823202704Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831095638Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -569,12 +574,58 @@ wwv_flow_imp_shared.create_list_item(
 ,p_list_item_display_sequence=>120
 ,p_list_item_link_text=>'Leave requests'
 ,p_static_id=>'leave-requests'
-,p_list_item_link_target=>'f?p=&APP_ID.:8:&APP_SESSION.::&DEBUG.:::'
+,p_list_item_link_target=>'f?p=&APP_ID.:8:&SESSION.::&DEBUG.::::'
 ,p_list_item_icon=>'fa-table'
+,p_security_scheme=>wwv_flow_imp.id(32395475308312409544)
 ,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
 ,p_list_item_current_for_pages=>'8'
 ,p_created_on=>wwv_flow_imp.dz('20260826184538Z')
-,p_updated_on=>wwv_flow_imp.dz('20260826184538Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831092134Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(32970257310202773441)
+,p_list_item_display_sequence=>210
+,p_list_item_link_text=>'My attendance report'
+,p_static_id=>'my-attendance-report'
+,p_list_item_link_target=>'f?p=&APP_ID.:23:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-tasks-alt'
+,p_security_scheme=>wwv_flow_imp.id(32395557731228415778)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'23'
+,p_created_on=>wwv_flow_imp.dz('20260831090609Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831092418Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(32969918168993765565)
+,p_list_item_display_sequence=>200
+,p_list_item_link_text=>'My leave request'
+,p_static_id=>'my-leave-request'
+,p_list_item_link_target=>'f?p=&APP_ID.:21:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-sign-out'
+,p_security_scheme=>wwv_flow_imp.id(32395557731228415778)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'21'
+,p_created_on=>wwv_flow_imp.dz('20260831090450Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831092355Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(32970430389912089845)
+,p_list_item_display_sequence=>220
+,p_list_item_link_text=>'My payslip'
+,p_static_id=>'my-payslip'
+,p_list_item_link_target=>'f?p=&APP_ID.:24:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-table'
+,p_security_scheme=>wwv_flow_imp.id(32395557731228415778)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'24'
+,p_created_on=>wwv_flow_imp.dz('20260831090708Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831092454Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -583,12 +634,13 @@ wwv_flow_imp_shared.create_list_item(
 ,p_list_item_display_sequence=>160
 ,p_list_item_link_text=>'Payslips Report'
 ,p_static_id=>'payslips-report'
-,p_list_item_link_target=>'f?p=&APP_ID.:16:&APP_SESSION.::&DEBUG.:::'
+,p_list_item_link_target=>'f?p=&APP_ID.:16:&SESSION.::&DEBUG.::::'
 ,p_list_item_icon=>'fa-money-bag'
+,p_security_scheme=>wwv_flow_imp.id(32395475308312409544)
 ,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
 ,p_list_item_current_for_pages=>'16'
 ,p_created_on=>wwv_flow_imp.dz('20260827192120Z')
-,p_updated_on=>wwv_flow_imp.dz('20260827192120Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831092300Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -1357,7 +1409,7 @@ wwv_flow_imp_shared.create_menu(
 ,p_name=>'Breadcrumb'
 ,p_static_id=>'breadcrumb'
 ,p_created_on=>wwv_flow_imp.dz('20260823202704Z')
-,p_updated_on=>wwv_flow_imp.dz('20260828092150Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831090708Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -1490,6 +1542,39 @@ wwv_flow_imp_shared.create_menu_option(
 ,p_page_id=>8
 ,p_created_on=>wwv_flow_imp.dz('20260826184538Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260826184538Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_shared.create_menu_option(
+ p_id=>wwv_flow_imp.id(32970258385762773447)
+,p_short_name=>'My attendance report'
+,p_static_id=>'my-attendance-report'
+,p_link=>'f?p=&APP_ID.:23:&APP_SESSION.::&DEBUG.:::'
+,p_page_id=>23
+,p_created_on=>wwv_flow_imp.dz('20260831090609Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831090609Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_shared.create_menu_option(
+ p_id=>wwv_flow_imp.id(32969919191389765569)
+,p_short_name=>'My leave request'
+,p_static_id=>'my-leave-request'
+,p_link=>'f?p=&APP_ID.:21:&APP_SESSION.::&DEBUG.:::'
+,p_page_id=>21
+,p_created_on=>wwv_flow_imp.dz('20260831090450Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831090450Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_shared.create_menu_option(
+ p_id=>wwv_flow_imp.id(32970431396701089850)
+,p_short_name=>'My payslip'
+,p_static_id=>'my-payslip'
+,p_link=>'f?p=&APP_ID.:24:&APP_SESSION.::&DEBUG.:::'
+,p_page_id=>24
+,p_created_on=>wwv_flow_imp.dz('20260831090708Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831090708Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -1798,7 +1883,7 @@ wwv_flow_imp_page.create_page(
 '<p>Click the <strong>Reset</strong> button to reset the interactive report back to the default settings.</p>'))
 ,p_page_component_map=>'18'
 ,p_created_on=>wwv_flow_imp.dz('20260823202704Z')
-,p_last_updated_on=>wwv_flow_imp.dz('20260828084352Z')
+,p_last_updated_on=>wwv_flow_imp.dz('20260831091852Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_last_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -1841,12 +1926,7 @@ wwv_flow_imp_page.create_page_plug(
 '       POSITION_ID,',
 '       HIRE_DATE,',
 '       STATUS',
-'  from TOLU_EMPLOYEES',
-'  Where Employee_id = (',
-'    Select employee_id from TOLU_USERS',
-'    Where upper(username) = upper(:APP_USER)',
-'    And Account_status = ''Active''',
-'  );'))
+'  from TOLU_EMPLOYEES'))
 ,p_plug_source_type=>'NATIVE_IR'
 ,p_prn_content_disposition=>'ATTACHMENT'
 ,p_prn_units=>'INCHES'
@@ -1878,7 +1958,7 @@ wwv_flow_imp_page.create_page_plug(
 ,p_prn_border_color=>'#666666'
 ,p_ai_enabled=>false
 ,p_created_on=>wwv_flow_imp.dz('20260823202708Z')
-,p_updated_on=>wwv_flow_imp.dz('20260828084352Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831091852Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -1896,9 +1976,10 @@ wwv_flow_imp_page.create_worksheet(
 ,p_download_formats=>'CSV:HTML:XLSX:PDF'
 ,p_enable_mail_download=>'Y'
 ,p_detail_link=>'f?p=&APP_ID.:3:&SESSION.::&DEBUG.:3:P3_EMPLOYEE_ID:#EMPLOYEE_ID#'
+,p_detail_link_auth_scheme=>wwv_flow_imp.id(32395475308312409544)
 ,p_internal_uid=>31310428987577049675
 ,p_created_on=>wwv_flow_imp.dz('20260823202708Z')
-,p_updated_on=>wwv_flow_imp.dz('20260828084352Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831091852Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -2144,7 +2225,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'02'
 ,p_created_on=>wwv_flow_imp.dz('20260823202708Z')
-,p_last_updated_on=>wwv_flow_imp.dz('20260828192107Z')
+,p_last_updated_on=>wwv_flow_imp.dz('20260831091814Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_last_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -2176,13 +2257,25 @@ wwv_flow_imp_page.create_page_plug(
 ,p_plug_display_sequence=>20
 ,p_plug_new_grid_row=>false
 ,p_plug_item_display_point=>'ABOVE'
-,p_query_type=>'TABLE'
-,p_query_table=>'TOLU_EMPLOYEES'
-,p_include_rowid_column=>false
+,p_query_type=>'SQL'
+,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select EMPLOYEE_ID,',
+'       FIRST_NAME,',
+'       LAST_NAME,',
+'       DOB,',
+'       GENDER,',
+'       PHONE,',
+'       EMAIL,',
+'       DEPARTMENT_ID,',
+'       POSITION_ID,',
+'       HIRE_DATE,',
+'       STATUS',
+'  from TOLU_EMPLOYEES'))
 ,p_is_editable=>false
 ,p_plug_source_type=>'NATIVE_FORM'
+,p_plug_required_role=>wwv_flow_imp.id(32395475308312409544)
 ,p_created_on=>wwv_flow_imp.dz('20260823204316Z')
-,p_updated_on=>wwv_flow_imp.dz('20260823211827Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831091814Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -3587,10 +3680,11 @@ wwv_flow_imp_page.create_page(
 ,p_autocomplete_on_off=>'OFF'
 ,p_step_template=>4073832297226169690
 ,p_page_template_options=>'#DEFAULT#'
+,p_required_role=>wwv_flow_imp.id(32395475308312409544)
 ,p_protection_level=>'C'
 ,p_page_component_map=>'18'
 ,p_created_on=>wwv_flow_imp.dz('20260826184538Z')
-,p_last_updated_on=>wwv_flow_imp.dz('20260828082223Z')
+,p_last_updated_on=>wwv_flow_imp.dz('20260831091442Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_last_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -3632,13 +3726,9 @@ wwv_flow_imp_page.create_page_plug(
 '       REASON,',
 '       DESCISION_DATE',
 '  from TOLU_LEAVE_REQUESTS',
-'  Where Employee_id = (',
-'    Select employee_id from TOLU_USERS',
-'    Where upper(username) = upper(:APP_USER)',
-'    And Account_status = ''Active''',
-'  );',
 ''))
 ,p_plug_source_type=>'NATIVE_IR'
+,p_plug_required_role=>wwv_flow_imp.id(32395475308312409544)
 ,p_prn_content_disposition=>'ATTACHMENT'
 ,p_prn_units=>'INCHES'
 ,p_prn_paper_size=>'LETTER'
@@ -3669,7 +3759,7 @@ wwv_flow_imp_page.create_page_plug(
 ,p_prn_border_color=>'#666666'
 ,p_ai_enabled=>false
 ,p_created_on=>wwv_flow_imp.dz('20260826184540Z')
-,p_updated_on=>wwv_flow_imp.dz('20260828082223Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831091442Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -3863,7 +3953,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'16'
 ,p_created_on=>wwv_flow_imp.dz('20260824132543Z')
-,p_last_updated_on=>wwv_flow_imp.dz('20260825135312Z')
+,p_last_updated_on=>wwv_flow_imp.dz('20260831135715Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_last_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -3943,9 +4033,11 @@ wwv_flow_imp_page.create_page_item(
 ,p_source_type=>'ALWAYS_NULL'
 ,p_display_as=>'NATIVE_SELECT_LIST'
 ,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
-'Select First_name || '' '' || Last_name d, Employee_id r',
-'From TOLU_employees',
-'ORDER BY First_name, Last_name;'))
+'Select e.Last_name || '' '' || e.First_name d, e.Employee_id r',
+'From TOLU_employees e',
+'JOIN TOLU_users u ON e.employee_id = u.employee_id',
+'Where UPPER(u.username) = UPPER(:APP_USER)',
+'Order by e.Last_name, e.First_name;'))
 ,p_lov_display_null=>'YES'
 ,p_cHeight=>1
 ,p_field_template=>1610598304472262251
@@ -3954,7 +4046,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
   'page_action_on_selection', 'NONE')).to_clob
 ,p_created_on=>wwv_flow_imp.dz('20260824140632Z')
-,p_updated_on=>wwv_flow_imp.dz('20260825135312Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831135715Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -4422,7 +4514,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'18'
 ,p_created_on=>wwv_flow_imp.dz('20260827123912Z')
-,p_last_updated_on=>wwv_flow_imp.dz('20260828082321Z')
+,p_last_updated_on=>wwv_flow_imp.dz('20260831091611Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_last_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -4460,13 +4552,9 @@ wwv_flow_imp_page.create_page_plug(
 '       CLOCK_IN,',
 '       CLOCK_OUT,',
 '       STATUS',
-'  from TOLU_ATTENDANCE',
-'  Where Employee_id = (',
-'    Select employee_id from TOLU_USERS',
-'    Where upper(username) = upper(:APP_USER)',
-'    And Account_status = ''Active''',
-'  );'))
+'  from TOLU_ATTENDANCE'))
 ,p_plug_source_type=>'NATIVE_IR'
+,p_plug_required_role=>wwv_flow_imp.id(32395475308312409544)
 ,p_prn_content_disposition=>'ATTACHMENT'
 ,p_prn_units=>'INCHES'
 ,p_prn_paper_size=>'LETTER'
@@ -4497,7 +4585,7 @@ wwv_flow_imp_page.create_page_plug(
 ,p_prn_border_color=>'#666666'
 ,p_ai_enabled=>false
 ,p_created_on=>wwv_flow_imp.dz('20260827123915Z')
-,p_updated_on=>wwv_flow_imp.dz('20260828082321Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831091611Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -4644,7 +4732,7 @@ wwv_flow_imp_page.create_page_button(
 ,p_warn_on_unsaved_changes=>null
 ,p_grid_new_row=>'Y'
 ,p_created_on=>wwv_flow_imp.dz('20260827124117Z')
-,p_updated_on=>wwv_flow_imp.dz('20260827164615Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831091611Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -4685,7 +4773,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'16'
 ,p_created_on=>wwv_flow_imp.dz('20260827162110Z')
-,p_last_updated_on=>wwv_flow_imp.dz('20260827191147Z')
+,p_last_updated_on=>wwv_flow_imp.dz('20260831094152Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_last_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -4723,19 +4811,6 @@ wwv_flow_imp_page.create_page_button(
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
-wwv_flow_imp_page.create_page_branch(
- p_id=>wwv_flow_imp.id(32292288410572908501)
-,p_branch_name=>'Redirect to report'
-,p_branch_action=>'f?p=&APP_ID.:13:&SESSION.::&DEBUG.:::&success_msg=#SUCCESS_MSG#'
-,p_branch_point=>'AFTER_PROCESSING'
-,p_branch_type=>'REDIRECT_URL'
-,p_branch_when_button_id=>wwv_flow_imp.id(31526138559809341448)
-,p_branch_sequence=>10
-,p_created_on=>wwv_flow_imp.dz('20260827163605Z')
-,p_updated_on=>wwv_flow_imp.dz('20260827163605Z')
-,p_created_by=>'OJOKILATOLU@GMAIL.COM'
-,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
-);
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(31526138376090341446)
 ,p_name=>'P14_EMPLOYEE'
@@ -4745,9 +4820,11 @@ wwv_flow_imp_page.create_page_item(
 ,p_source_type=>'ALWAYS_NULL'
 ,p_display_as=>'NATIVE_SELECT_LIST'
 ,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
-'Select Last_name || '' '' || First_name d, Employee_id r',
-'From TOLU_employees',
-'Order by Last_name, First_name;'))
+'Select e.Last_name || '' '' || e.First_name d, e.Employee_id r',
+'From TOLU_employees e',
+'JOIN TOLU_users u ON e.employee_id = u.employee_id',
+'Where UPPER(u.username) = UPPER(:APP_USER)',
+'Order by e.Last_name, e.First_name;'))
 ,p_lov_display_null=>'YES'
 ,p_cHeight=>1
 ,p_field_template=>1610598304472262251
@@ -4756,7 +4833,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
   'page_action_on_selection', 'NONE')).to_clob
 ,p_created_on=>wwv_flow_imp.dz('20260827162815Z')
-,p_updated_on=>wwv_flow_imp.dz('20260827191147Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831093827Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -4816,7 +4893,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'16'
 ,p_created_on=>wwv_flow_imp.dz('20260827170718Z')
-,p_last_updated_on=>wwv_flow_imp.dz('20260827191620Z')
+,p_last_updated_on=>wwv_flow_imp.dz('20260831094923Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_last_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -4872,19 +4949,6 @@ wwv_flow_imp_page.create_page_button(
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
-wwv_flow_imp_page.create_page_branch(
- p_id=>wwv_flow_imp.id(32292289116107908508)
-,p_branch_name=>'Redirect to report'
-,p_branch_action=>'f?p=&APP_ID.:13:&SESSION.::&DEBUG.:::&success_msg=#SUCCESS_MSG#'
-,p_branch_point=>'AFTER_PROCESSING'
-,p_branch_type=>'REDIRECT_URL'
-,p_branch_when_button_id=>wwv_flow_imp.id(32292288880820908505)
-,p_branch_sequence=>10
-,p_created_on=>wwv_flow_imp.dz('20260827171757Z')
-,p_updated_on=>wwv_flow_imp.dz('20260827171757Z')
-,p_created_by=>'OJOKILATOLU@GMAIL.COM'
-,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
-);
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(32292288723667908504)
 ,p_name=>'P15_CLOCK_OUT'
@@ -4895,11 +4959,10 @@ wwv_flow_imp_page.create_page_item(
 ,p_display_as=>'NATIVE_SELECT_LIST'
 ,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'Select e.Last_name || '' '' || e.First_name d, e.Employee_id r',
-'from TOLU_employees e',
-'JOIN TOLU_attendance c ON e.employee_id = c.employee_id',
-'Where Clock_in IS NOT NULL',
-'AND Clock_out IS NULL',
-'ORDER BY Last_name, First_name;'))
+'From TOLU_employees e',
+'JOIN TOLU_users u ON e.employee_id = u.employee_id',
+'Where UPPER(u.username) = UPPER(:APP_USER)',
+'Order by e.Last_name, e.First_name;'))
 ,p_lov_display_null=>'YES'
 ,p_cHeight=>1
 ,p_field_template=>1610598304472262251
@@ -4908,7 +4971,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
   'page_action_on_selection', 'NONE')).to_clob
 ,p_created_on=>wwv_flow_imp.dz('20260827171757Z')
-,p_updated_on=>wwv_flow_imp.dz('20260827191620Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831094923Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -4965,7 +5028,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'18'
 ,p_created_on=>wwv_flow_imp.dz('20260827192120Z')
-,p_last_updated_on=>wwv_flow_imp.dz('20260828082431Z')
+,p_last_updated_on=>wwv_flow_imp.dz('20260831091657Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_last_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -5009,13 +5072,9 @@ wwv_flow_imp_page.create_page_plug(
 '       PENSION,',
 '       NET_SALARY,',
 '       GENERATED_DATE',
-'  from TOLU_PAYSLIPS',
-'  Where Employee_id = (',
-'    Select employee_id from TOLU_USERS',
-'    Where upper(username) = upper(:APP_USER)',
-'    And Account_status = ''Active''',
-'  );'))
+'  from TOLU_PAYSLIPS'))
 ,p_plug_source_type=>'NATIVE_IR'
+,p_plug_required_role=>wwv_flow_imp.id(32395475308312409544)
 ,p_prn_content_disposition=>'ATTACHMENT'
 ,p_prn_units=>'INCHES'
 ,p_prn_paper_size=>'LETTER'
@@ -5046,7 +5105,7 @@ wwv_flow_imp_page.create_page_plug(
 ,p_prn_border_color=>'#666666'
 ,p_ai_enabled=>false
 ,p_created_on=>wwv_flow_imp.dz('20260827192124Z')
-,p_updated_on=>wwv_flow_imp.dz('20260828082431Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831091657Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -5692,7 +5751,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'23'
 ,p_created_on=>wwv_flow_imp.dz('20260828092150Z')
-,p_last_updated_on=>wwv_flow_imp.dz('20260828100709Z')
+,p_last_updated_on=>wwv_flow_imp.dz('20260831140506Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_last_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -5732,7 +5791,7 @@ wwv_flow_imp_page.create_page_plug(
 ,p_plug_query_num_rows_type=>'SCROLL'
 ,p_show_total_row_count=>false
 ,p_created_on=>wwv_flow_imp.dz('20260828095046Z')
-,p_updated_on=>wwv_flow_imp.dz('20260828100552Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831140506Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -5741,18 +5800,19 @@ wwv_flow_imp_page.create_card(
 ,p_region_id=>wwv_flow_imp.id(32292291567820908532)
 ,p_layout_type=>'ROW'
 ,p_title_adv_formatting=>false
+,p_title_column_name=>'CARD_TITLE'
 ,p_sub_title_adv_formatting=>false
 ,p_body_adv_formatting=>false
 ,p_second_body_adv_formatting=>false
 ,p_badge_column_name=>'CARD_VALUE'
 ,p_media_adv_formatting=>false
 ,p_pk1_column_name=>'CARD_TITLE'
-,p_updated_on=>wwv_flow_imp.dz('20260828100552Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831140506Z')
 ,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(32292291341292908530)
-,p_plug_name=>'Summary PDL'
+,p_plug_name=>'Summary pending leave request'
 ,p_static_id=>'summary'
 ,p_region_template_options=>'#DEFAULT#:t-CardsRegion--hideHeader js-addHiddenHeadingRoleDesc'
 ,p_plug_template=>2074200852440250129
@@ -5770,7 +5830,7 @@ wwv_flow_imp_page.create_page_plug(
 ,p_plug_query_num_rows_type=>'SCROLL'
 ,p_show_total_row_count=>false
 ,p_created_on=>wwv_flow_imp.dz('20260828094706Z')
-,p_updated_on=>wwv_flow_imp.dz('20260828100709Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831140506Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -5779,18 +5839,19 @@ wwv_flow_imp_page.create_card(
 ,p_region_id=>wwv_flow_imp.id(32292291341292908530)
 ,p_layout_type=>'GRID'
 ,p_title_adv_formatting=>false
+,p_title_column_name=>'CARD_TITLE'
 ,p_sub_title_adv_formatting=>false
 ,p_body_adv_formatting=>false
 ,p_second_body_adv_formatting=>false
 ,p_badge_column_name=>'CARD_VALUE'
 ,p_media_adv_formatting=>false
 ,p_pk1_column_name=>'CARD_TITLE'
-,p_updated_on=>wwv_flow_imp.dz('20260828094706Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831140413Z')
 ,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(32292291149548908528)
-,p_plug_name=>'Summary dashboard'
+,p_plug_name=>'Summary Active Employees'
 ,p_static_id=>'summary-dashboard'
 ,p_title=>'Total active employees'
 ,p_region_template_options=>'#DEFAULT#:t-CardsRegion--hideHeader js-addHiddenHeadingRoleDesc'
@@ -5807,7 +5868,7 @@ wwv_flow_imp_page.create_page_plug(
 ,p_plug_query_num_rows_type=>'SCROLL'
 ,p_show_total_row_count=>false
 ,p_created_on=>wwv_flow_imp.dz('20260828093025Z')
-,p_updated_on=>wwv_flow_imp.dz('20260828094205Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831140347Z')
 ,p_created_by=>'OJOKILATOLU@GMAIL.COM'
 ,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
 );
@@ -5816,14 +5877,842 @@ wwv_flow_imp_page.create_card(
 ,p_region_id=>wwv_flow_imp.id(32292291149548908528)
 ,p_layout_type=>'GRID'
 ,p_title_adv_formatting=>false
+,p_title_column_name=>'CARD_TITLE'
 ,p_sub_title_adv_formatting=>false
 ,p_body_adv_formatting=>false
 ,p_second_body_adv_formatting=>false
 ,p_badge_column_name=>'CARD_VALUE'
 ,p_media_adv_formatting=>false
 ,p_pk1_column_name=>'CARD_TITLE'
-,p_updated_on=>wwv_flow_imp.dz('20260828094205Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831140347Z')
 ,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+end;
+/
+prompt --application/pages/page_00021
+begin
+wwv_flow_imp_page.create_page(
+ p_id=>21
+,p_name=>'My leave request'
+,p_alias=>'MY-LEAVE-REQUEST'
+,p_step_title=>'My leave request'
+,p_autocomplete_on_off=>'OFF'
+,p_step_template=>4073832297226169690
+,p_page_template_options=>'#DEFAULT#'
+,p_protection_level=>'C'
+,p_page_component_map=>'18'
+,p_created_on=>wwv_flow_imp.dz('20260831090450Z')
+,p_last_updated_on=>wwv_flow_imp.dz('20260831094749Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_last_updated_by=>'SULTAN'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(32969918575331765568)
+,p_plug_name=>'Breadcrumb'
+,p_static_id=>'breadcrumb'
+,p_region_template_options=>'#DEFAULT#:t-BreadcrumbRegion--useBreadcrumbTitle'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>2532939663579242476
+,p_plug_display_sequence=>10
+,p_plug_display_point=>'REGION_POSITION_01'
+,p_plug_item_display_point=>'ABOVE'
+,p_menu_id=>wwv_flow_imp.id(31310411607187049356)
+,p_plug_source_type=>'NATIVE_BREADCRUMB'
+,p_menu_template_id=>4073839682315169711
+,p_created_on=>wwv_flow_imp.dz('20260831090450Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831090450Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(32969948876809765873)
+,p_plug_name=>'My leave request'
+,p_static_id=>'my-leave-request'
+,p_region_template_options=>'#DEFAULT#:t-IRR-region--hideHeader js-addHiddenHeadingRoleDesc'
+,p_plug_template=>2102002977963900996
+,p_plug_display_sequence=>10
+,p_plug_item_display_point=>'ABOVE'
+,p_query_type=>'SQL'
+,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select LEAVE_REQUEST_ID,',
+'       EMPLOYEE_ID,',
+'       LEAVE_TYPE_ID,',
+'       START_DATE,',
+'       END_DATE,',
+'       DAYS_REQUESTED,',
+'       STATUS,',
+'       REASON,',
+'       DESCISION_DATE',
+'  from TOLU_LEAVE_REQUESTS',
+'Where Employee_id = (',
+'    Select employee_id from TOLU_USERS',
+'    Where upper(username) = upper(:APP_USER)',
+'    And Account_status = ''Active''',
+'  );'))
+,p_plug_source_type=>'NATIVE_IR'
+,p_plug_required_role=>wwv_flow_imp.id(32395557731228415778)
+,p_prn_content_disposition=>'ATTACHMENT'
+,p_prn_units=>'INCHES'
+,p_prn_paper_size=>'LETTER'
+,p_prn_width=>11
+,p_prn_height=>8.5
+,p_prn_orientation=>'HORIZONTAL'
+,p_prn_page_header_font_color=>'#000000'
+,p_prn_page_header_font_family=>'Helvetica'
+,p_prn_page_header_font_weight=>'normal'
+,p_prn_page_header_font_size=>'12'
+,p_prn_page_footer_font_color=>'#000000'
+,p_prn_page_footer_font_family=>'Helvetica'
+,p_prn_page_footer_font_weight=>'normal'
+,p_prn_page_footer_font_size=>'12'
+,p_prn_header_bg_color=>'#EEEEEE'
+,p_prn_header_font_color=>'#000000'
+,p_prn_header_font_family=>'Helvetica'
+,p_prn_header_font_weight=>'bold'
+,p_prn_header_font_size=>'10'
+,p_prn_body_bg_color=>'#FFFFFF'
+,p_prn_body_font_color=>'#000000'
+,p_prn_body_font_family=>'Helvetica'
+,p_prn_body_font_weight=>'normal'
+,p_prn_body_font_size=>'10'
+,p_prn_border_width=>.5
+,p_prn_page_header_alignment=>'CENTER'
+,p_prn_page_footer_alignment=>'CENTER'
+,p_prn_border_color=>'#666666'
+,p_ai_enabled=>false
+,p_created_on=>wwv_flow_imp.dz('20260831090454Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831094749Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'SULTAN'
+);
+wwv_flow_imp_page.create_worksheet(
+ p_id=>wwv_flow_imp.id(32969948921312765873)
+,p_max_row_count_message=>'The maximum row count for this report is #MAX_ROW_COUNT# rows.  Please apply a filter to reduce the number of records in your query.'
+,p_no_data_found_message=>'No data found.'
+,p_pagination_type=>'ROWS_X_TO_Y'
+,p_pagination_display_pos=>'BOTTOM_RIGHT'
+,p_report_list_mode=>'TABS'
+,p_lazy_loading=>false
+,p_show_detail_link=>'N'
+,p_show_notify=>'Y'
+,p_download_formats=>'CSV:HTML:XLSX:PDF'
+,p_enable_mail_download=>'Y'
+,p_internal_uid=>32969948921312765873
+,p_created_on=>wwv_flow_imp.dz('20260831090454Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831094749Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'SULTAN'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(32969952269581765983)
+,p_db_column_name=>'DAYS_REQUESTED'
+,p_display_order=>6
+,p_column_identifier=>'F'
+,p_column_label=>'Days Requested'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
+,p_created_on=>wwv_flow_imp.dz('20260831090454Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831090454Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(32969953470380765986)
+,p_db_column_name=>'DESCISION_DATE'
+,p_display_order=>9
+,p_column_identifier=>'I'
+,p_column_label=>'Descision Date'
+,p_column_type=>'DATE'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
+,p_created_on=>wwv_flow_imp.dz('20260831090454Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831090454Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(32969950636504765978)
+,p_db_column_name=>'EMPLOYEE_ID'
+,p_display_order=>2
+,p_column_identifier=>'B'
+,p_column_label=>'Employee'
+,p_column_type=>'STRING'
+,p_display_text_as=>'LOV_ESCAPE_SC'
+,p_heading_alignment=>'LEFT'
+,p_rpt_named_lov=>wwv_flow_imp.id(31528226439073109258)
+,p_rpt_show_filter_lov=>'1'
+,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
+,p_created_on=>wwv_flow_imp.dz('20260831090454Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831090454Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(32969951834773765982)
+,p_db_column_name=>'END_DATE'
+,p_display_order=>5
+,p_column_identifier=>'E'
+,p_column_label=>'End Date'
+,p_column_type=>'DATE'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
+,p_created_on=>wwv_flow_imp.dz('20260831090454Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831090454Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(32969950268563765976)
+,p_db_column_name=>'LEAVE_REQUEST_ID'
+,p_display_order=>0
+,p_is_primary_key=>'Y'
+,p_column_identifier=>'A'
+,p_column_label=>'Leave Request ID'
+,p_column_type=>'STRING'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_created_on=>wwv_flow_imp.dz('20260831090454Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831090454Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(32969951090450765979)
+,p_db_column_name=>'LEAVE_TYPE_ID'
+,p_display_order=>3
+,p_column_identifier=>'C'
+,p_column_label=>'Leave Type'
+,p_column_type=>'STRING'
+,p_display_text_as=>'LOV_ESCAPE_SC'
+,p_heading_alignment=>'LEFT'
+,p_rpt_named_lov=>wwv_flow_imp.id(31528226662235109259)
+,p_rpt_show_filter_lov=>'1'
+,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
+,p_created_on=>wwv_flow_imp.dz('20260831090454Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831090454Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(32969953059039765985)
+,p_db_column_name=>'REASON'
+,p_display_order=>8
+,p_column_identifier=>'H'
+,p_column_label=>'Reason'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
+,p_created_on=>wwv_flow_imp.dz('20260831090454Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831090454Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(32969951447016765981)
+,p_db_column_name=>'START_DATE'
+,p_display_order=>4
+,p_column_identifier=>'D'
+,p_column_label=>'Start Date'
+,p_column_type=>'DATE'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
+,p_created_on=>wwv_flow_imp.dz('20260831090454Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831090454Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(32969952689028765984)
+,p_db_column_name=>'STATUS'
+,p_display_order=>7
+,p_column_identifier=>'G'
+,p_column_label=>'Status'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
+,p_created_on=>wwv_flow_imp.dz('20260831090454Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831090454Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_rpt(
+ p_id=>wwv_flow_imp.id(32979650916495333877)
+,p_application_user=>'APXWS_DEFAULT'
+,p_report_seq=>10
+,p_report_alias=>'primary'
+,p_status=>'PUBLIC'
+,p_is_default=>'Y'
+,p_report_columns=>'LEAVE_REQUEST_ID:EMPLOYEE_ID:LEAVE_TYPE_ID:START_DATE:END_DATE:DAYS_REQUESTED:STATUS:REASON:DESCISION_DATE'
+,p_created_on=>wwv_flow_imp.dz('20260831094749Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831094749Z')
+,p_created_by=>'SULTAN'
+,p_updated_by=>'SULTAN'
+);
+end;
+/
+prompt --application/pages/page_00023
+begin
+wwv_flow_imp_page.create_page(
+ p_id=>23
+,p_name=>'My attendance report'
+,p_alias=>'MY-ATTENDANCE-REPORT'
+,p_step_title=>'My attendance report'
+,p_autocomplete_on_off=>'OFF'
+,p_step_template=>4073832297226169690
+,p_page_template_options=>'#DEFAULT#'
+,p_required_role=>wwv_flow_imp.id(32395557731228415778)
+,p_protection_level=>'C'
+,p_page_component_map=>'18'
+,p_created_on=>wwv_flow_imp.dz('20260831090609Z')
+,p_last_updated_on=>wwv_flow_imp.dz('20260831094720Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_last_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(32970257794414773446)
+,p_plug_name=>'Breadcrumb'
+,p_static_id=>'breadcrumb'
+,p_region_template_options=>'#DEFAULT#:t-BreadcrumbRegion--useBreadcrumbTitle'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>2532939663579242476
+,p_plug_display_sequence=>10
+,p_plug_display_point=>'REGION_POSITION_01'
+,p_plug_item_display_point=>'ABOVE'
+,p_menu_id=>wwv_flow_imp.id(31310411607187049356)
+,p_plug_source_type=>'NATIVE_BREADCRUMB'
+,p_menu_template_id=>4073839682315169711
+,p_created_on=>wwv_flow_imp.dz('20260831090609Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831090609Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(32970259472979773755)
+,p_plug_name=>'My attendance report'
+,p_static_id=>'my-attendance-report'
+,p_region_template_options=>'#DEFAULT#:t-IRR-region--hideHeader js-addHiddenHeadingRoleDesc'
+,p_plug_template=>2102002977963900996
+,p_plug_display_sequence=>10
+,p_plug_item_display_point=>'ABOVE'
+,p_query_type=>'SQL'
+,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select ATTENDANCE_ID,',
+'       EMPLOYEE_ID,',
+'       ATTENDANCE_DATE,',
+'       CLOCK_IN,',
+'       CLOCK_OUT,',
+'       STATUS',
+'  from TOLU_ATTENDANCE',
+'Where Employee_id = (',
+'    Select employee_id from TOLU_USERS',
+'    Where upper(username) = upper(:APP_USER)',
+'    And Account_status = ''Active''',
+'  )',
+'ORDER BY attendance_date desc;'))
+,p_plug_source_type=>'NATIVE_IR'
+,p_prn_content_disposition=>'ATTACHMENT'
+,p_prn_units=>'INCHES'
+,p_prn_paper_size=>'LETTER'
+,p_prn_width=>11
+,p_prn_height=>8.5
+,p_prn_orientation=>'HORIZONTAL'
+,p_prn_page_header_font_color=>'#000000'
+,p_prn_page_header_font_family=>'Helvetica'
+,p_prn_page_header_font_weight=>'normal'
+,p_prn_page_header_font_size=>'12'
+,p_prn_page_footer_font_color=>'#000000'
+,p_prn_page_footer_font_family=>'Helvetica'
+,p_prn_page_footer_font_weight=>'normal'
+,p_prn_page_footer_font_size=>'12'
+,p_prn_header_bg_color=>'#EEEEEE'
+,p_prn_header_font_color=>'#000000'
+,p_prn_header_font_family=>'Helvetica'
+,p_prn_header_font_weight=>'bold'
+,p_prn_header_font_size=>'10'
+,p_prn_body_bg_color=>'#FFFFFF'
+,p_prn_body_font_color=>'#000000'
+,p_prn_body_font_family=>'Helvetica'
+,p_prn_body_font_weight=>'normal'
+,p_prn_body_font_size=>'10'
+,p_prn_border_width=>.5
+,p_prn_page_header_alignment=>'CENTER'
+,p_prn_page_footer_alignment=>'CENTER'
+,p_prn_border_color=>'#666666'
+,p_ai_enabled=>false
+,p_created_on=>wwv_flow_imp.dz('20260831090613Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831094720Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet(
+ p_id=>wwv_flow_imp.id(32970259529596773755)
+,p_max_row_count_message=>'The maximum row count for this report is #MAX_ROW_COUNT# rows.  Please apply a filter to reduce the number of records in your query.'
+,p_no_data_found_message=>'No data found.'
+,p_pagination_type=>'ROWS_X_TO_Y'
+,p_pagination_display_pos=>'BOTTOM_RIGHT'
+,p_report_list_mode=>'TABS'
+,p_lazy_loading=>false
+,p_show_detail_link=>'N'
+,p_show_notify=>'Y'
+,p_download_formats=>'CSV:HTML:XLSX:PDF'
+,p_enable_mail_download=>'Y'
+,p_internal_uid=>32970259529596773755
+,p_created_on=>wwv_flow_imp.dz('20260831090613Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831094720Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(32970262142128773871)
+,p_db_column_name=>'ATTENDANCE_DATE'
+,p_display_order=>3
+,p_column_identifier=>'C'
+,p_column_label=>'Attendance Date'
+,p_column_type=>'DATE'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
+,p_created_on=>wwv_flow_imp.dz('20260831090613Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831090613Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(32970261366760773868)
+,p_db_column_name=>'ATTENDANCE_ID'
+,p_display_order=>0
+,p_is_primary_key=>'Y'
+,p_column_identifier=>'A'
+,p_column_label=>'Attendance ID'
+,p_column_type=>'NUMBER'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_created_on=>wwv_flow_imp.dz('20260831090613Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831090613Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(32970262593709773873)
+,p_db_column_name=>'CLOCK_IN'
+,p_display_order=>4
+,p_column_identifier=>'D'
+,p_column_label=>'Clock In'
+,p_column_type=>'DATE'
+,p_heading_alignment=>'LEFT'
+,p_format_mask=>'DD-MON-YYYY HH:MIPM'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
+,p_created_on=>wwv_flow_imp.dz('20260831090613Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831094720Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(32970262901755773874)
+,p_db_column_name=>'CLOCK_OUT'
+,p_display_order=>5
+,p_column_identifier=>'E'
+,p_column_label=>'Clock Out'
+,p_column_type=>'DATE'
+,p_heading_alignment=>'LEFT'
+,p_format_mask=>'DD-MON-YYYY HH:MIPM'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
+,p_created_on=>wwv_flow_imp.dz('20260831090613Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831094720Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(32970261728398773870)
+,p_db_column_name=>'EMPLOYEE_ID'
+,p_display_order=>2
+,p_column_identifier=>'B'
+,p_column_label=>'Employee'
+,p_column_type=>'STRING'
+,p_display_text_as=>'LOV_ESCAPE_SC'
+,p_heading_alignment=>'LEFT'
+,p_rpt_named_lov=>wwv_flow_imp.id(31528226439073109258)
+,p_rpt_show_filter_lov=>'1'
+,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
+,p_created_on=>wwv_flow_imp.dz('20260831090613Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831090613Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(32970263360464773875)
+,p_db_column_name=>'STATUS'
+,p_display_order=>6
+,p_column_identifier=>'F'
+,p_column_label=>'Status'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
+,p_created_on=>wwv_flow_imp.dz('20260831090613Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831090613Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_rpt(
+ p_id=>wwv_flow_imp.id(32976879065352969465)
+,p_application_user=>'APXWS_DEFAULT'
+,p_report_seq=>10
+,p_report_alias=>'primary'
+,p_status=>'PUBLIC'
+,p_is_default=>'Y'
+,p_report_columns=>'ATTENDANCE_ID:EMPLOYEE_ID:ATTENDANCE_DATE:CLOCK_IN:CLOCK_OUT:STATUS'
+,p_created_on=>wwv_flow_imp.dz('20260831093849Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831093849Z')
+,p_created_by=>'SULTAN'
+,p_updated_by=>'SULTAN'
+);
+end;
+/
+prompt --application/pages/page_00024
+begin
+wwv_flow_imp_page.create_page(
+ p_id=>24
+,p_name=>'My payslip'
+,p_alias=>'MY-PAYSLIP'
+,p_step_title=>'My payslip'
+,p_autocomplete_on_off=>'OFF'
+,p_step_template=>4073832297226169690
+,p_page_template_options=>'#DEFAULT#'
+,p_protection_level=>'C'
+,p_page_component_map=>'18'
+,p_created_on=>wwv_flow_imp.dz('20260831090708Z')
+,p_last_updated_on=>wwv_flow_imp.dz('20260831095148Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_last_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(32970430753862089848)
+,p_plug_name=>'Breadcrumb'
+,p_static_id=>'breadcrumb'
+,p_region_template_options=>'#DEFAULT#:t-BreadcrumbRegion--useBreadcrumbTitle'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>2532939663579242476
+,p_plug_display_sequence=>10
+,p_plug_display_point=>'REGION_POSITION_01'
+,p_plug_item_display_point=>'ABOVE'
+,p_menu_id=>wwv_flow_imp.id(31310411607187049356)
+,p_plug_source_type=>'NATIVE_BREADCRUMB'
+,p_menu_template_id=>4073839682315169711
+,p_created_on=>wwv_flow_imp.dz('20260831090708Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831090708Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(32970439132280090181)
+,p_plug_name=>'My payslip'
+,p_static_id=>'my-payslip'
+,p_region_template_options=>'#DEFAULT#:t-IRR-region--hideHeader js-addHiddenHeadingRoleDesc'
+,p_plug_template=>2102002977963900996
+,p_plug_display_sequence=>10
+,p_plug_item_display_point=>'ABOVE'
+,p_query_type=>'SQL'
+,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select PAYSLIP_ID,',
+'       PAYROLL_ID,',
+'       EMPLOYEE_ID,',
+'       PAYROLL_MONTH,',
+'       PAYROLL_YEAR,',
+'       BASIC,',
+'       HOUSING_ALLOWANCE,',
+'       TRANSPORT_ALLOWANCE,',
+'       GROSS_SALARY,',
+'       PENSION,',
+'       NET_SALARY,',
+'       GENERATED_DATE',
+'  from TOLU_PAYSLIPS',
+'Where Employee_id = (',
+'    Select employee_id from TOLU_USERS',
+'    Where upper(username) = upper(:APP_USER)',
+'    And Account_status = ''Active''',
+'  );',
+''))
+,p_plug_source_type=>'NATIVE_IR'
+,p_plug_required_role=>wwv_flow_imp.id(32395557731228415778)
+,p_prn_content_disposition=>'ATTACHMENT'
+,p_prn_units=>'INCHES'
+,p_prn_paper_size=>'LETTER'
+,p_prn_width=>11
+,p_prn_height=>8.5
+,p_prn_orientation=>'HORIZONTAL'
+,p_prn_page_header_font_color=>'#000000'
+,p_prn_page_header_font_family=>'Helvetica'
+,p_prn_page_header_font_weight=>'normal'
+,p_prn_page_header_font_size=>'12'
+,p_prn_page_footer_font_color=>'#000000'
+,p_prn_page_footer_font_family=>'Helvetica'
+,p_prn_page_footer_font_weight=>'normal'
+,p_prn_page_footer_font_size=>'12'
+,p_prn_header_bg_color=>'#EEEEEE'
+,p_prn_header_font_color=>'#000000'
+,p_prn_header_font_family=>'Helvetica'
+,p_prn_header_font_weight=>'bold'
+,p_prn_header_font_size=>'10'
+,p_prn_body_bg_color=>'#FFFFFF'
+,p_prn_body_font_color=>'#000000'
+,p_prn_body_font_family=>'Helvetica'
+,p_prn_body_font_weight=>'normal'
+,p_prn_body_font_size=>'10'
+,p_prn_border_width=>.5
+,p_prn_page_header_alignment=>'CENTER'
+,p_prn_page_footer_alignment=>'CENTER'
+,p_prn_border_color=>'#666666'
+,p_ai_enabled=>false
+,p_created_on=>wwv_flow_imp.dz('20260831090713Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831095148Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet(
+ p_id=>wwv_flow_imp.id(32970439250051090181)
+,p_max_row_count_message=>'The maximum row count for this report is #MAX_ROW_COUNT# rows.  Please apply a filter to reduce the number of records in your query.'
+,p_no_data_found_message=>'No data found.'
+,p_pagination_type=>'ROWS_X_TO_Y'
+,p_pagination_display_pos=>'BOTTOM_RIGHT'
+,p_report_list_mode=>'TABS'
+,p_lazy_loading=>false
+,p_show_detail_link=>'N'
+,p_show_notify=>'Y'
+,p_download_formats=>'CSV:HTML:XLSX:PDF'
+,p_enable_mail_download=>'Y'
+,p_internal_uid=>32970439250051090181
+,p_created_on=>wwv_flow_imp.dz('20260831090713Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831095148Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(32970446740179090286)
+,p_db_column_name=>'BASIC'
+,p_display_order=>6
+,p_column_identifier=>'F'
+,p_column_label=>'Basic'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_format_mask=>'999G999G999G999G990D00'
+,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
+,p_created_on=>wwv_flow_imp.dz('20260831090713Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831095148Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(32970445440448090282)
+,p_db_column_name=>'EMPLOYEE_ID'
+,p_display_order=>3
+,p_column_identifier=>'C'
+,p_column_label=>'Employee'
+,p_column_type=>'STRING'
+,p_display_text_as=>'LOV_ESCAPE_SC'
+,p_heading_alignment=>'LEFT'
+,p_rpt_named_lov=>wwv_flow_imp.id(31528226439073109258)
+,p_rpt_show_filter_lov=>'1'
+,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
+,p_created_on=>wwv_flow_imp.dz('20260831090713Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831090713Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(32970449139177090294)
+,p_db_column_name=>'GENERATED_DATE'
+,p_display_order=>12
+,p_column_identifier=>'L'
+,p_column_label=>'Generated Date'
+,p_column_type=>'DATE'
+,p_heading_alignment=>'LEFT'
+,p_tz_dependent=>'N'
+,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
+,p_created_on=>wwv_flow_imp.dz('20260831090713Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831090713Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(32970447913621090290)
+,p_db_column_name=>'GROSS_SALARY'
+,p_display_order=>9
+,p_column_identifier=>'I'
+,p_column_label=>'Gross Salary'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_format_mask=>'999G999G999G999G990D00'
+,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
+,p_created_on=>wwv_flow_imp.dz('20260831090713Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831095148Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(32970447148793090287)
+,p_db_column_name=>'HOUSING_ALLOWANCE'
+,p_display_order=>7
+,p_column_identifier=>'G'
+,p_column_label=>'Housing Allowance'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_format_mask=>'999G999G999G999G990D00'
+,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
+,p_created_on=>wwv_flow_imp.dz('20260831090713Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831095148Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(32970448781825090293)
+,p_db_column_name=>'NET_SALARY'
+,p_display_order=>11
+,p_column_identifier=>'K'
+,p_column_label=>'Net Salary'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_format_mask=>'999G999G999G999G990D00'
+,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
+,p_created_on=>wwv_flow_imp.dz('20260831090713Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831095148Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(32970789850140791601)
+,p_db_column_name=>'PAYROLL_ID'
+,p_display_order=>22
+,p_column_identifier=>'M'
+,p_column_label=>'Payroll Id'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
+,p_created_on=>wwv_flow_imp.dz('20260831090937Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831090937Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(32970445859206090284)
+,p_db_column_name=>'PAYROLL_MONTH'
+,p_display_order=>4
+,p_column_identifier=>'D'
+,p_column_label=>'Payroll Month'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
+,p_created_on=>wwv_flow_imp.dz('20260831090713Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831090713Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(32970446218542090285)
+,p_db_column_name=>'PAYROLL_YEAR'
+,p_display_order=>5
+,p_column_identifier=>'E'
+,p_column_label=>'Payroll Year'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
+,p_created_on=>wwv_flow_imp.dz('20260831090713Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831090713Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(32970444653172090278)
+,p_db_column_name=>'PAYSLIP_ID'
+,p_display_order=>0
+,p_is_primary_key=>'Y'
+,p_column_identifier=>'A'
+,p_column_label=>'Payslip ID'
+,p_column_type=>'NUMBER'
+,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_created_on=>wwv_flow_imp.dz('20260831090713Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831090713Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(32970448342444090291)
+,p_db_column_name=>'PENSION'
+,p_display_order=>10
+,p_column_identifier=>'J'
+,p_column_label=>'Pension'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_format_mask=>'999G999G999G999G990D00'
+,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
+,p_created_on=>wwv_flow_imp.dz('20260831090713Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831095148Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(32970447512515090289)
+,p_db_column_name=>'TRANSPORT_ALLOWANCE'
+,p_display_order=>8
+,p_column_identifier=>'H'
+,p_column_label=>'Transport Allowance'
+,p_column_type=>'NUMBER'
+,p_heading_alignment=>'RIGHT'
+,p_column_alignment=>'RIGHT'
+,p_format_mask=>'999G999G999G999G990D00'
+,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
+,p_created_on=>wwv_flow_imp.dz('20260831090713Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831095148Z')
+,p_created_by=>'OJOKILATOLU@GMAIL.COM'
+,p_updated_by=>'OJOKILATOLU@GMAIL.COM'
+);
+wwv_flow_imp_page.create_worksheet_rpt(
+ p_id=>wwv_flow_imp.id(32979618840957332053)
+,p_application_user=>'APXWS_DEFAULT'
+,p_report_seq=>10
+,p_report_alias=>'primary'
+,p_status=>'PUBLIC'
+,p_is_default=>'Y'
+,p_report_columns=>'PAYSLIP_ID:EMPLOYEE_ID:PAYROLL_MONTH:PAYROLL_YEAR:BASIC:HOUSING_ALLOWANCE:TRANSPORT_ALLOWANCE:GROSS_SALARY:PENSION:NET_SALARY:GENERATED_DATE:PAYROLL_ID'
+,p_created_on=>wwv_flow_imp.dz('20260831094730Z')
+,p_updated_on=>wwv_flow_imp.dz('20260831094730Z')
+,p_created_by=>'SULTAN'
+,p_updated_by=>'SULTAN'
 );
 end;
 /
